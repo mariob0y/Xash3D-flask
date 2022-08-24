@@ -154,13 +154,13 @@
 			<div id='linksPlaceholder' style=display:none>Download archives to load locally next time:</div><br>
 		</form>
 
-		<script type='text/javascript' src='browserfs.min.js'></script>
+		<script type='text/javascript' src="{{url_for('static', filename='browserfs.min.js')}}"></script>
 		<script type='text/javascript'>
 		var zipMods = [];
 		var pkgMods = [];
 		</script>
 
-		<script type='text/javascript' src='mods.js'></script>
+		<script type='text/javascript' src="{{url_for('static', filename='mods.js')}}"></script>
 
 		<script type='text/javascript'>
 		var statusElement = document.getElementById('status');
