@@ -6,11 +6,6 @@ app = Flask(__name__, template_folder=cwd, static_folder=cwd)
 
 
 @app.route("/")
-def intro():
-    return render_template("xash-intro.html")
-
-
-@app.route("/xash.html")
 def xash():
     return render_template("xash.html")
 
@@ -21,4 +16,6 @@ def serve_static(path):
 
 
 if __name__ == "__main__":
+    if not os.path.isfile(cwd + "/hl1.zip"):
+        os.system("zip -F hl1_split.zip --out hl1.zip")
     app.run(debug=True)
